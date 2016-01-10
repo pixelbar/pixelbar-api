@@ -32,5 +32,5 @@ app.use(function *(next) {
 app.use(mount('/v1', api.v1.call(app)))
 app = http.createServer(app.callback())
 
-app.listen(3000)
-console.log(`$ open http://127.0.0.1:3000`)
+app.listen(process.env.PORT || 3000)
+console.log(`$ open http://127.0.0.1:${process.env.PORT || 3000}`)
