@@ -1,0 +1,41 @@
+{
+  "name": "pixelbar-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --es_staging index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelbar/pixelbar-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixelbar/pixelbar-api/issues"
+  },
+  "homepage": "https://github.com/pixelbar/pixelbar-api#readme",
+  "devDependencies": {
+    "dotenv": "^1.2.0",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
+    "gulp-eslint": "^1.1.1",
+    "gulp-nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "kcors": "^1.0.1",
+    "koa": "^1.1.2",
+    "koa-bodyparser": "^2.0.1",
+    "koa-bouncer": "^5.0.0",
+    "koa-etag": "^2.1.0",
+    "koa-helmet": "^1.0.0",
+    "koa-json": "^1.1.1",
+    "koa-mount": "^1.3.0",
+    "koa-router": "^5.3.0",
+    "nodemailer": "^1.11.0",
+    "nodemailer-smtp-transport": "^2.0.0",
+    "recaptcha-validator": "^1.0.0"
+  }
+}
