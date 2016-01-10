@@ -14,7 +14,7 @@ gulp.task('default', () => {
   gutil.log(gutil.colors.yellow('Running nodemon'))
   require('dotenv').load()
   return nodemon({
-    exec: 'node --es_staging',
+    exec: 'node --harmony',
     script: 'index.js',
     tasks: ['lint'],
     verbose: true

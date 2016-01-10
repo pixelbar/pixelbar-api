@@ -2,8 +2,8 @@ const nodemailer = require('nodemailer')
 const smtpTransport = require('nodemailer-smtp-transport')
 const recaptchaValidator = require('recaptcha-validator')
 
-class AccountController {
-  * register () {
+module.exports = {
+  register: function *() {
     this.validateBody('firstname').required('Firstname required').isString().isLength(1, 50).trim()
     this.validateBody('lastname').required('Lastname required').isString().isLength(1, 50).trim()
     this.validateBody('nickname').required('Nickname required').isString().isLength(1, 50).trim()
@@ -16,8 +16,8 @@ class AccountController {
     this.validateBody('membertype').required('Membertype required').isString().isLength(1, 50).trim()
     this.validateBody('g-recaptcha-response').required('reCaptcha response required').isString()
 
-    let body = ''
-    for (let key in this.vals) {
+    var body = ''
+    for (var key in this.vals) {
       if (key !== 'g-recaptcha-response') body += `<tr><td><b>${key}: </b></td><td>${this.vals[key]}</td><tr/>\n`
     }
     body += `<tr><td><b>IP: </b></td><td>${this.request.ip}</td><tr/>\n`
@@ -65,5 +65,3 @@ class AccountController {
     }
   }
 }
-
-module.exports = new AccountController()
